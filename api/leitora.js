@@ -1,4 +1,4 @@
-const textoElement = document.getElementById('texto');
+const textoElement = document.getElementById('letras');
 
 function falarTexto() {
     const texto = textoElement.innerText;

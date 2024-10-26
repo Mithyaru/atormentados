@@ -7,6 +7,9 @@ const Jogo = () => {
     return (
         <>
             <div className="jogo-container">
+            <div className="sound-icon">
+                    icone do som 
+                </div>
                 <div className="jogo">
                     <div className="img-jogo">
                         <img src={imgteste} alt="/*aqui vem o nome da imagem do banco*/" />
@@ -30,7 +33,7 @@ const Jogo = () => {
                     </div>
 
                     <div>
-                        
+                        <label></label>
                     </div>
                 </div>
                 <footer className="footer">
@@ -47,6 +50,9 @@ const Jogo = () => {
                         <LetraOpcao />
                     </div>
                 </footer>
+                    <div> Estrelinha Obtidas:</div>
+                    <p>aqui a gente insere a cada palavra certa uma estrela para "parabenizar" o user</p>
+                    <p>no final colocaremos uma telinha de "parabens coletou todas as estrelas!"</p>
             </div>
         </>
     );

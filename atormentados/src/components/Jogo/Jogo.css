@@ -1,8 +1,18 @@
 .jogo-container {
     display: flex;
-    flex-direction: column; /* Muda para coluna para colocar o footer abaixo */
+    flex-direction: column; /* Mantenha como coluna */
     align-items: center;    /* Centraliza os itens horizontalmente */
     width: 80%;
+    position: relative;     /* Para que o ícone possa ser posicionado absoluto */
+}
+
+.sound-icon {
+    position: absolute;     /* Posiciona o ícone em relação ao container */
+    top: 20px;              /* Ajuste a distância do topo conforme necessário */
+    right: 20px;            /* Ajuste a distância da direita conforme necessário */
+    cursor: pointer;        /* Muda o cursor para indicar que é clicável */
+    font-size: 24px;       /* Tamanho do ícone */
+    color: #333;           /* Cor do ícone */
 }
 
 .jogo {
@@ -40,4 +50,9 @@
     margin-top: 10px;
     overflow: auto;
     overflow-y: visible;
+}
+
+.img-jogo{
+  margin-right: 10rem;
+  margin-top: 3rem;
 }
