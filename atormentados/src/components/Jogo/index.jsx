@@ -68,8 +68,8 @@ const Jogo = () => {
 
     const textoRef = useRef(null);
 
-    const falarTexto = () => {
-        const texto = textoRef.current.innerText;
+    const falarTexto = (texto) => {
+        console.log(texto);
         const synth = window.speechSynthesis;
 
         const utterance = new SpeechSynthesisUtterance(texto);
@@ -87,10 +87,11 @@ const Jogo = () => {
                     <div className="img-jogo">
                         <img src={imagens[indicePalavraAtual]} alt="/*aqui vem o nome da imagem do banco*/" />
                         <span ref={textoRef}
-                            style={{ cursor: 'pointer', outline: 'none', color: 'white'}}
+                            style={{ cursor: 'pointer', outline: 'none', color: 'white' }}
                             tabIndex="0" // Torna o elemento focável
-                            onClick={falarTexto} // Lê o texto ao clicar
-                           >{text + palavras[indicePalavraAtual]}</span>
+                            onFocus={() => falarTexto(text + palavras[indicePalavraAtual])} // Lê o texto ao focar
+                            onClick={() => falarTexto(text + palavras[indicePalavraAtual])}
+                        >{text + palavras[indicePalavraAtual]}</span>
                     </div>
                     <div className="jogo-dentro">
                         <div className="letras-jogo">
@@ -107,7 +108,7 @@ const Jogo = () => {
                 <footer className="footer">
                     <div className="letras-opcoes">
                         {opcoes.map((letra, index) => (
-                            <button className="opcao" ref={textoRef} tabIndex={0} key={index} onFocus={falarTexto} onClick={() => mostrarLetra(palavras[indicePalavraAtual].indexOf(letra))}>
+                            <button className="opcao" ref={textoRef} tabIndex={0} key={index} onFocus={() => falarTexto(letra)} onClick={() => mostrarLetra(palavras[indicePalavraAtual].indexOf(letra))}>
                                 {letra}
                             </button>
                         ))}
