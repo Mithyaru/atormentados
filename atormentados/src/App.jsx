@@ -3,17 +3,17 @@ import './App.css'
 import { BrowserRouter as Router, Route, Routes, Link } from 'react-router-dom';
 import Inicial from './components/Inicial';
 import Quiz from './components/Quiz';
+import Nav from './components/Nav';
 
 function App() {
   
 
   return (
     <>
-    <div className='nav'>
-        
-      </div>
+    
     <div className='app'>
-      
+    <Nav></Nav>
+    <div className='container-app'>
       <Router>
         <Routes>
           <Route path='/' element={<Inicial></Inicial>}></Route>
@@ -21,6 +21,7 @@ function App() {
           <Route path='/' element={''}></Route>
         </Routes>
       </Router>
+      </div>
     </div>
     </>
   )
