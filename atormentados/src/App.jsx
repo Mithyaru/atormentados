@@ -9,6 +9,11 @@ function App() {
 
   return (
     <>
+    <div className='nav'>
+        
+      </div>
+    <div className='app'>
+      
       <Router>
         <Routes>
           <Route path='/' element={<Inicial></Inicial>}></Route>
@@ -16,6 +21,7 @@ function App() {
           <Route path='/' element={''}></Route>
         </Routes>
       </Router>
+    </div>
     </>
   )
 }
