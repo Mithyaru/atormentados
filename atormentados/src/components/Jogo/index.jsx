@@ -3,6 +3,9 @@ import './Jogo.css';
 import imgteste from '../../assets/142446793 (1).png';
 import LetraOpcao from "../LetraOpcao";
 import { useEffect, useRef, useState } from "react";
+import lapis from '../../assets/lapis.png'
+import porta from '../../assets/porta.jpg'
+import zebra from '../../assets/zebra.png'
 
 const Jogo = () => {
     const [palavras] = useState(['lapis', 'porta', 'zebra']);
@@ -10,6 +13,8 @@ const Jogo = () => {
     const [letrasVisiveis, setLetrasVisiveis] = useState(Array(palavras[0].length).fill(false));
     const [indicePalavraAtual, setIndicePalavraAtual] = useState(0);
     const [opcoes, setOpcoes] = useState([]);
+    const imagens = [lapis, porta, zebra]
+    const text = 'A imagem é '
 
     useEffect(() => {
         gerarOpcoes(palavras[indicePalavraAtual]);
@@ -49,12 +54,12 @@ const Jogo = () => {
             setPontos(prevPontos => prevPontos + 1); // Adiciona pontos
             setTimeout(() => {
                 alert(`Você completou a palavra "${palavras[indicePalavraAtual]}"!`); // Alerta de palavra completa
-                
+
                 // Avança para a próxima palavra
                 if (indicePalavraAtual < palavras.length - 1) {
                     setIndicePalavraAtual(prevIndex => prevIndex + 1);
                 } else {
-                    alert('Você completou todas as palavras!');
+                    alert('Você coletou todas as estrelas!');
                     // Opcional: Reiniciar o jogo ou resetar o estado
                 }
             }, 800);
@@ -80,7 +85,12 @@ const Jogo = () => {
             <div className="jogo-container">
                 <div className="jogo">
                     <div className="img-jogo">
-                        <img src={imgteste} alt="/*aqui vem o nome da imagem do banco*/" />
+                        <img src={imagens[indicePalavraAtual]} alt="/*aqui vem o nome da imagem do banco*/" />
+                        <span ref={textoRef}
+                            style={{ cursor: 'pointer', outline: 'none', color: 'white'}}
+                            tabIndex="0" // Torna o elemento focável
+                            onClick={falarTexto} // Lê o texto ao clicar
+                           >{text + palavras[indicePalavraAtual]}</span>
                     </div>
                     <div className="jogo-dentro">
                         <div className="letras-jogo">
@@ -104,7 +114,7 @@ const Jogo = () => {
                     </div>
                 </footer>
                 <div className="texto-inferior">
-                    <div> Estrelinhas Obtidas: {pontos}</div>
+                    <div> Estrelinhas Obtidas: {<span className="pontos">{pontos}</span>}</div>
                     <p>aqui a gente insere a cada palavra certa uma estrela para "parabenizar" o user</p>
                     <p>no final colocaremos uma telinha de "parabéns, coletou todas as estrelas!"</p>
                 </div>

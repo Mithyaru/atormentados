@@ -1,5 +1,11 @@
 
 .nav {
-    width: 100%;
-    padding-top: 1rem;
+    width: 100%; 
+}
+
+.navIcon {
+    display: flex;
+    color: orange;
+    align-items: center;
+    justify-content: center;
 }

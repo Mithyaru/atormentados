@@ -26,14 +26,22 @@
     margin-top: 10px;
     overflow: auto;
     overflow-y: visible;
+    justify-content: center;
+    align-items: center;
+    
 }
 
 .footer {
     width: 100%;
     padding: 20px; 
-    background-color: #f8f8f8; 
+    padding-bottom: 25px;
+    background-color: #f8f8f800; 
     text-align: center; 
     margin-top: 40px; 
+}
+
+.pontos {
+    color: orange;
 }
 
 
@@ -50,6 +58,15 @@
 .img-jogo{
   margin-right: 10rem;
   margin-top: 3rem;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.img-jogo img {
+    max-width: 150px;
+    max-height: 150px;
 }
 
 @font-face {
@@ -65,27 +82,36 @@
     justify-content: center;
     align-items: center;
     font-family: 'OpenDyslexic', sans-serif;
+    color: #000;
+    background-color: #fff;
+    border-radius: 10px;
+    padding: 10px;
 }
 
 footer {
     display: flex;
     justify-content: center;
     align-items: center;
+    background-color: transparent;
 }
 
 .letra{
     display: flex;
-    padding: 2.5rem;
+    width: 3em;
+    height: 3em;
     background-color: rgb(255, 153, 0);
     margin: 5px;
     border: 1px solid #000;
     font-family: 'OpenDyslexic', sans-serif;
     font-size: 24px;
+    justify-content: center;
+    align-items: center;
 }
 
 .opcao {
-    width: 70%;
+    width: 60%;
     padding: 0.7rem;
     font-size: 32px;
     font-family: 'OpenDyslexic', sans-serif;
+    background-color: rgb(48, 183, 228);
 }
