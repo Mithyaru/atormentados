@@ -1,3 +1,4 @@
+import { Link } from "react-router-dom"
 import "./incial.css"
 
 const Inicial = () => {
@@ -5,7 +6,7 @@ const Inicial = () => {
     return (
         <>
             <div className="quadro">
-                aaa
+                <Link to="/jogo">Jogar <img src=" " alt=""></img></Link>
             </div>
         </>
     )

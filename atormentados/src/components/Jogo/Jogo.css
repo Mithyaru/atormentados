@@ -1,0 +1,43 @@
+.jogo-container {
+    display: flex;
+    flex-direction: column; /* Muda para coluna para colocar o footer abaixo */
+    align-items: center;    /* Centraliza os itens horizontalmente */
+    width: 80%;
+}
+
+.jogo {
+    display: flex;
+    flex-direction: row;
+}
+
+.jogo-dentro {
+    display: flex;
+    flex-direction: column;
+}
+
+.letras-jogo {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 25px;
+    margin-top: 10px;
+    overflow: auto;
+    overflow-y: visible;
+}
+
+.footer {
+    width: 100%;
+    padding: 20px; 
+    background-color: #f8f8f8; 
+    text-align: center; 
+    margin-top: 40px; 
+}
+
+
+.letras-opcoes {
+    display: grid;
+    grid-template-columns: repeat(5, 1fr);
+    grid-row-gap: 25px;
+    margin-top: 10px;
+    overflow: auto;
+    overflow-y: visible;
+}

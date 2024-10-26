@@ -17,4 +17,5 @@
     background-color: red;
     width: 100%;
     padding: 2rem;
+    justify-content: space-between;
 }
