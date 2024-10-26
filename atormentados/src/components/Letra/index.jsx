@@ -1,12 +1,12 @@
 import "./letra.css"
 
-const Letra = () => {
+const Letra = ({palavras}) => {
 
     return (
         <>
 
-            <div class="letra" placeholder=''>
-                a
+            <div class="letra">
+            
             </div>
 
         </>

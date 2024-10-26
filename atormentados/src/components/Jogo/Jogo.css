@@ -38,6 +38,7 @@
 
 
 .letras-opcoes {
+    width: 100%;
     display: grid;
     grid-template-columns: repeat(5, 1fr);
     grid-row-gap: 25px;
@@ -49,4 +50,25 @@
 .img-jogo{
   margin-right: 10rem;
   margin-top: 3rem;
+}
+
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../assets/OpenDyslexic-Bold.otf') format('truetype'); /* Ajuste o nome do arquivo conforme necessário */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.texto-inferior {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    font-family: 'OpenDyslexic', sans-serif;
+}
+
+footer {
+    display: flex;
+    justify-content: center;
+    align-items: center;
 }

@@ -22,7 +22,7 @@ const LetraOpcao = () => {
 
             <button className="opcao"  ref={textoRef} 
                 tabIndex={0} onFocus={falarTexto}>
-                batorenida
+                b
             </button>
 
         </>
