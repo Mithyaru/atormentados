@@ -1,3 +1,10 @@
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('./assets/OpenDyslexic-Bold.otf') format('truetype'); /* Ajuste o caminho conforme necessário */
+    font-weight: normal;
+    font-style: normal;
+}
+
 body {
     display: flex;
     width: 100%;
@@ -6,7 +13,10 @@ body {
     padding: 0;
     justify-content: center;
     align-items: center;
+    font-family: 'Open Dyslexic', sans-serif;
 }
+
+
 
 #root {
     width: 100%;

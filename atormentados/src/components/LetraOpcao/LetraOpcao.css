@@ -1,0 +1,13 @@
+@font-face {
+    font-family: 'OpenDyslexic';
+    src: url('../../assets/OpenDyslexic-Bold.otf') format('truetype'); /* Ajuste o nome do arquivo conforme necessário */
+    font-weight: normal;
+    font-style: normal;
+}
+
+.opcao {
+    width: 70%;
+    padding: 0.7rem;
+    font-size: 32px;
+    font-family: 'OpenDyslexic', sans-serif;
+}
