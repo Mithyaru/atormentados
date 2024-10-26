@@ -1,3 +1,6 @@
+Link do pitch: https://youtu.be/WRFr1BYMuiA
+Link pra acessar a aplicação publicada: atormentados.vercel.app
+
 Estrutura de pastas do projeto:
 ├── Hackathon/              
     ├── atormentados/
