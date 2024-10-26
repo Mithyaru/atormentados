@@ -22,7 +22,7 @@
 .letras-jogo {
     display: grid;
     grid-template-columns: repeat(5, 1fr);
-    grid-row-gap: 25px;
+    grid-column-gap: 25px;
     margin-top: 10px;
     overflow: auto;
     overflow-y: visible;
@@ -71,4 +71,21 @@ footer {
     display: flex;
     justify-content: center;
     align-items: center;
+}
+
+.letra{
+    display: flex;
+    padding: 2.5rem;
+    background-color: rgb(255, 153, 0);
+    margin: 5px;
+    border: 1px solid #000;
+    font-family: 'OpenDyslexic', sans-serif;
+    font-size: 24px;
+}
+
+.opcao {
+    width: 70%;
+    padding: 0.7rem;
+    font-size: 32px;
+    font-family: 'OpenDyslexic', sans-serif;
 }
